@@ -3,142 +3,206 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MoodShift: CBT AI Coach — Terms of Use (EULA)</title>
+<title>Terms of Use — MoodShift: CBT AI Coach</title>
 <style>
-  /* Zachowany Twój styl wizualny */
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f8f6ff; color: #2c2c3e; line-height: 1.7; }
-  .header { background: linear-gradient(135deg, #e8e4f8, #d4eee3); padding: 48px 24px 36px; text-align: center; }
-  .logo { width: 80px; height: 80px; background: #12111f; border-radius: 20px; margin: 0 auto 16px; display: flex; align-items: center; justify-content: center; }
-  h1 { font-size: 28px; font-weight: 600; color: #3c3489; margin-bottom: 8px; }
-  .subtitle { color: #7c6fcd; font-size: 14px; }
-  .container { max-width: 720px; margin: 0 auto; padding: 40px 24px; }
-  .meta { background: white; border-radius: 16px; padding: 16px 20px; margin-bottom: 32px; border: 1px solid #e0ddf5; display: flex; gap: 24px; flex-wrap: wrap; }
-  .meta-item { font-size: 13px; color: #7c6fcd; }
-  .meta-item strong { color: #3c3489; display: block; font-size: 12px; margin-bottom: 2px; }
-  .section { background: white; border-radius: 20px; padding: 28px; margin-bottom: 20px; border: 1px solid #e0ddf5; }
-  .section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
-  .icon { width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 18px; }
-  h2 { font-size: 17px; font-weight: 600; color: #3c3489; }
-  p { color: #5a5a7a; font-size: 15px; margin-bottom: 12px; }
-  p:last-child { margin-bottom: 0; }
-  ul { color: #5a5a7a; font-size: 15px; padding-left: 20px; }
-  ul li { margin-bottom: 8px; }
-  .highlight { background: #feeef2; border-radius: 12px; padding: 16px; margin: 16px 0; border-left: 3px solid #f24e70; }
-  .highlight p { color: #893444; margin: 0; font-weight: 500; }
-  .contact-box { background: #12111f; border-radius: 20px; padding: 28px; text-align: center; margin-top: 32px; }
-  .contact-box h2 { color: #e8e4f8; margin-bottom: 8px; }
-  .contact-box p { color: #9b8fd4; margin-bottom: 16px; }
-  .contact-box a { color: #7c6fcd; text-decoration: none; font-weight: 500; }
-  .footer { text-align: center; padding: 24px; color: #9b8fd4; font-size: 13px; }
-  @media (max-width: 600px) { .container { padding: 24px 16px; } .section { padding: 20px; } }
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap');
+  :root {
+    --bg: #f8f6ff;
+    --bg2: #f0eeff;
+    --card: #ffffff;
+    --border: rgba(124,111,205,0.2);
+    --border-strong: rgba(124,111,205,0.35);
+    --purple: #7c6fcd;
+    --purple-dark: #3c3489;
+    --purple-light: #9b8fd4;
+    --purple-pale: #6557c0;
+    --text: #3c3489;
+    --text-body: #5a5478;
+    --text-muted: #9b8fd4;
+    --green: #3b6d11;
+    --green-light: #5a9a2a;
+    --green-bg: #eaf3de;
+    --red: #893444;
+    --red-bg: #feeef2;
+    --ring1: rgba(197,191,240,0.8);
+    --ring2: rgba(212,207,245,0.6);
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--text); font-family:'DM Sans',sans-serif; font-size:16px; line-height:1.8; min-height:100vh; overflow-x:hidden; }
+
+  .bg-rings {
+    position:fixed; top:0; left:0; width:100%; height:100%;
+    pointer-events:none; z-index:0; overflow:hidden;
+  }
+  .bg-rings svg { width:100%; height:100%; }
+
+  .container { position:relative; z-index:1; max-width:760px; margin:0 auto; padding:80px 24px 120px; }
+
+  .header { text-align:center; margin-bottom:64px; }
+  .logo { display:inline-flex; align-items:center; gap:14px; margin-bottom:36px; }
+  .logo-icon { width:52px; height:52px; background:var(--purple); border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 20px rgba(124,111,205,0.3); }
+  .logo-icon svg { width:24px; height:24px; fill:white; }
+  .logo-name { font-family:'DM Serif Display',serif; font-size:22px; color:var(--purple-dark); display:block; line-height:1; }
+  .logo-sub { font-size:11px; color:var(--purple-light); letter-spacing:2px; text-transform:uppercase; display:block; margin-top:4px; }
+  h1 { font-family:'DM Serif Display',serif; font-size:clamp(34px,6vw,52px); font-weight:400; color:var(--purple-dark); line-height:1.15; margin-bottom:20px; }
+  h1 em { font-style:italic; color:var(--purple); }
+  .header-meta { display:flex; align-items:center; justify-content:center; gap:12px; flex-wrap:wrap; }
+  .meta-pill { background:white; border:0.5px solid var(--border-strong); border-radius:100px; padding:6px 18px; font-size:13px; color:var(--purple); font-weight:500; }
+
+  .divider { width:60px; height:2px; background:linear-gradient(90deg,transparent,var(--purple),transparent); margin:48px auto; border:none; }
+
+  .summary-card { background:linear-gradient(135deg,rgba(124,111,205,0.08),rgba(197,191,240,0.12)); border:1px solid var(--border-strong); border-radius:24px; padding:32px; margin-bottom:48px; }
+  .summary-card p { color:var(--text-body); font-size:15px; line-height:1.9; }
+  .summary-card strong { color:var(--purple-dark); font-weight:500; }
+
+  .section { margin-bottom:48px; }
+  h2 { font-family:'DM Serif Display',serif; font-size:26px; font-weight:400; color:var(--purple-dark); margin-bottom:20px; display:flex; align-items:center; gap:14px; }
+  h2::before { content:''; display:block; width:4px; height:28px; background:var(--purple); border-radius:2px; flex-shrink:0; }
+  h3 { font-size:15px; font-weight:500; color:var(--purple); margin:24px 0 10px; letter-spacing:0.3px; }
+  p { color:var(--text-body); margin-bottom:14px; font-size:15px; }
+  ul { list-style:none; margin:0 0 14px; padding:0; }
+  ul li { color:var(--text-body); font-size:15px; padding:7px 0 7px 26px; position:relative; border-bottom:0.5px solid rgba(124,111,205,0.1); }
+  ul li:last-child { border-bottom:none; }
+  ul li::before { content:'→'; position:absolute; left:0; color:var(--purple); font-size:13px; top:9px; }
+
+  .block { background:white; border:0.5px solid var(--border); border-radius:18px; padding:24px; margin:20px 0; box-shadow:0 2px 12px rgba(124,111,205,0.06); }
+  .block.red-block { border-color:rgba(242,78,112,0.3); background:var(--red-bg); box-shadow:0 2px 12px rgba(242,78,112,0.06); }
+  .block.red-block p, .block.red-block li { color:var(--red); }
+  .block.red-block li::before { color:#f24e70; }
+  .block-title { font-size:12px; font-weight:500; letter-spacing:1.5px; text-transform:uppercase; color:var(--purple-light); margin-bottom:12px; display:block; }
+  .block.red-block .block-title { color:#f24e70; }
+
+  .contact { background:linear-gradient(135deg,white,rgba(240,238,255,0.8)); border:1px solid var(--border-strong); border-radius:24px; padding:48px 40px; text-align:center; margin-top:64px; box-shadow:0 4px 24px rgba(124,111,205,0.1); }
+  .contact h2 { justify-content:center; margin-bottom:12px; }
+  .contact h2::before { display:none; }
+  .contact p { margin-bottom:28px; }
+  .contact-btn { display:inline-block; background:var(--purple); color:white; text-decoration:none; padding:14px 36px; border-radius:100px; font-size:15px; font-weight:500; box-shadow:0 4px 16px rgba(124,111,205,0.35); transition:transform 0.2s,box-shadow 0.2s; }
+  .contact-btn:hover { transform:translateY(-1px); box-shadow:0 6px 20px rgba(124,111,205,0.45); }
+
+  .footer { text-align:center; margin-top:72px; padding-top:32px; border-top:0.5px solid var(--border); color:var(--text-muted); font-size:13px; }
+  .footer span { color:var(--purple); }
+  a { color:var(--purple); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+
+  @media(max-width:600px){
+    .container{padding:48px 16px 80px}
+    h1{font-size:30px}
+    .contact{padding:32px 20px}
+  }
 </style>
 </head>
 <body>
 
-<div class="header">
-  <div class="logo">
-    <svg width="60" height="60" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="32" cy="32" r="30" fill="#2a2060" opacity="0.6"/>
-      <circle cx="32" cy="32" r="22" fill="#3d2fa0" opacity="0.8"/>
-      <circle cx="32" cy="32" r="15" fill="#7c6fcd"/>
-      <path d="M32,18 L34.5,26 L43,26 L36.5,31 L39,39 L32,34 L25,39 L27.5,31 L21,26 L29.5,26 Z" fill="white"/>
-    </svg>
-  </div>
-  <h1>Terms of Use</h1>
-  <p class="subtitle">MoodShift — End User License Agreement (EULA)</p>
+<div class="bg-rings">
+  <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <radialGradient id="bgGrad" cx="50%" cy="45%" r="70%">
+        <stop offset="0%" stop-color="#eeedfe" stop-opacity="0.6"/>
+        <stop offset="100%" stop-color="#f8f6ff" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <rect width="1440" height="900" fill="url(#bgGrad)"/>
+    <circle cx="720" cy="400" r="60"  fill="none" stroke="#c5bff0" stroke-width="0.8" opacity="0.9"/>
+    <circle cx="720" cy="400" r="120" fill="none" stroke="#d4cff5" stroke-width="0.7" opacity="0.8"/>
+    <circle cx="720" cy="400" r="190" fill="none" stroke="#c5bff0" stroke-width="0.6" opacity="0.7"/>
+    <circle cx="720" cy="400" r="270" fill="none" stroke="#d4cff5" stroke-width="0.6" opacity="0.6"/>
+    <circle cx="720" cy="400" r="360" fill="none" stroke="#c5bff0" stroke-width="0.5" opacity="0.55"/>
+    <circle cx="720" cy="400" r="460" fill="none" stroke="#d4cff5" stroke-width="0.5" opacity="0.45"/>
+  </svg>
 </div>
 
 <div class="container">
 
-  <div class="meta">
-    <div class="meta-item"><strong>Effective date</strong>April 6, 2026</div>
-    <div class="meta-item"><strong>Last updated</strong>April 6, 2026</div>
-    <div class="meta-item"><strong>Agreement version</strong>1.0</div>
-    <div class="meta-item"><strong>Platform</strong>iOS / Apple Store</div>
+  <div class="header">
+    <div class="logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17 5.8 21.3l2.4-7.4L2 9.4h7.6z"/></svg>
+      </div>
+      <div>
+        <span class="logo-name">MoodShift</span>
+        <span class="logo-sub">CBT AI Coach</span>
+      </div>
+    </div>
+    <h1>Terms of <em>Use</em></h1>
+    <div class="header-meta">
+      <span class="meta-pill">Effective: April 2026</span>
+      <span class="meta-pill">Version 1.0</span>
+      <span class="meta-pill">Apple EULA Standard</span>
+    </div>
+  </div>
+
+  <div class="summary-card">
+    <p><strong>In short:</strong> By using MoodShift, you agree to these rules. This app is a wellness tool for adults (18+), not a medical service. Subscriptions are handled by Apple, and you have full control over your data. Please read the medical disclaimer carefully.</p>
   </div>
 
   <div class="section">
-    <div class="section-header">
-      <div class="icon" style="background:#eeedfe;">⚖️</div>
-      <h2>Agreement to Terms</h2>
-    </div>
-    <p>By downloading or using MoodShift, these terms will automatically apply to you – you should make sure therefore that you read them carefully before using the app.</p>
-    <div class="highlight">
-      <p>MoodShift is a tool for self-reflection and personal growth. By using this app, you acknowledge that you are at least 18 years old (19 in South Korea) and agree to be bound by these Terms.</p>
+    <h2>Agreement to Terms</h2>
+    <p>MoodShift: CBT AI Coach ("MoodShift", "we", "us") provides an iOS application designed for emotional reflection and personal growth. By downloading or using the app, you agree to these Terms of Use and our Privacy Policy.</p>
+    <div class="block">
+      <span class="block-title">Age Requirement</span>
+      <p>You must be at least <strong>18 years old</strong> to use MoodShift. For users in South Korea, the minimum age is <strong>19</strong>. The app is not intended for minors.</p>
     </div>
   </div>
 
   <div class="section">
-    <div class="section-header">
-      <div class="icon" style="background:#feeef2;">⚠️</div>
-      <h2>Medical Disclaimer</h2>
+    <h2>Medical Disclaimer</h2>
+    <div class="block red-block">
+      <span class="block-title">⚠ IMPORTANT: NOT A MEDICAL SERVICE</span>
+      <p>MoodShift uses AI to provide Cognitive Behavioral Therapy (CBT) reflections. It is <strong>not a medical device</strong> and does not provide clinical diagnosis, therapy, or treatment.</p>
+      <ul>
+        <li>The AI (Claude) can make mistakes and is not a substitute for a human professional.</li>
+        <li>Do not ignore professional medical advice because of something you read in the app.</li>
+        <li><strong>Emergency:</strong> If you are thinking about self-harm or are in a crisis, contact emergency services or a local crisis helpline immediately.</li>
+      </ul>
     </div>
-    <p><strong>MoodShift is NOT a medical device or a clinical service.</strong> The AI-driven CBT techniques provided are for educational and wellness purposes only.</p>
+  </div>
+
+  <div class="section">
+    <h2>Subscriptions &amp; Payments</h2>
+    <p>We offer "Premium" and "Voice AI" plans via Apple In-App Purchases.</p>
     <ul>
-      <li>This app does not provide medical advice, diagnosis, or treatment.</li>
-      <li>Do not use this app as a substitute for professional therapy or psychiatric care.</li>
-      <li>The AI (Claude) can make mistakes or provide inaccurate reflections.</li>
-    </ul>
-    <p style="margin-top:12px; font-weight: bold; color: #f24e70;">If you are in a crisis or thinking about self-harm, please contact emergency services immediately.</p>
-  </div>
-
-  <div class="section">
-    <div class="section-header">
-      <div class="icon" style="background:#eaf3de;">💎</div>
-      <h2>Subscriptions and Payments</h2>
-    </div>
-    <p>MoodShift offers "Premium" and "Voice AI" subscriptions via Apple In-App Purchases.</p>
-    <ul>
-      <li><strong>Billing:</strong> Payments are charged to your Apple ID account at confirmation of purchase.</li>
-      <li><strong>Auto-Renewal:</strong> Subscriptions automatically renew unless canceled at least 24 hours before the end of the current period.</li>
-      <li><strong>Management:</strong> You can manage or cancel your subscriptions in your App Store Account Settings at any time.</li>
-      <li><strong>Refunds:</strong> All refund requests are handled directly by Apple, not MoodShift.</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <div class="section-header">
-      <div class="icon" style="background:#faeeda;">📱</div>
-      <h2>License and Restrictions</h2>
-    </div>
-    <p>We grant you a personal, non-exclusive, non-transferable license to use MoodShift on your iOS devices for personal use.</p>
-    <p>You agree not to:</p>
-    <ul>
-      <li>Attempt to copy, modify, or reverse engineer the app's code.</li>
-      <li>Use the app for any illegal or unauthorized purpose.</li>
-      <li>Extract data from the app for commercial use.</li>
+      <li><strong>Payments:</strong> Charged to your Apple ID account at confirmation of purchase.</li>
+      <li><strong>Auto-Renewal:</strong> Subscriptions renew automatically unless canceled at least 24 hours before the end of the current period.</li>
+      <li><strong>Management:</strong> You can manage or cancel subscriptions in your App Store Account Settings.</li>
+      <li><strong>Refunds:</strong> Handled exclusively by Apple according to their policies.</li>
     </ul>
   </div>
 
   <div class="section">
-    <div class="section-header">
-      <div class="icon" style="background:#eeedfe;">🛡️</div>
-      <h2>Limitation of Liability</h2>
-    </div>
-    <p>To the maximum extent permitted by law, MoodShift shall not be liable for any indirect, incidental, or consequential damages resulting from your use or inability to use the application.</p>
-    <p>The app is provided "as is" and "as available" without any warranties of any kind.</p>
+    <h2>License &amp; Restrictions</h2>
+    <p>We grant you a personal, non-transferable license to use MoodShift for personal, non-commercial purposes. You agree not to:</p>
+    <ul>
+      <li>Copy, modify, or reverse engineer the application.</li>
+      <li>Use the AI coaching for any illegal or harmful purposes.</li>
+      <li>Bypass any session limits or security features.</li>
+    </ul>
   </div>
 
   <div class="section">
-    <div class="section-header">
-      <div class="icon" style="background:#eaf3de;">🔄</div>
-      <h2>Changes to Terms</h2>
-    </div>
-    <p>We reserve the right to update these Terms of Use at any time. We will notify you of any changes by updating the "Last updated" date at the top of this page.</p>
-    <p>Your continued use of the app after changes are posted constitutes your acceptance of the new Terms.</p>
+    <h2>Privacy &amp; Data</h2>
+    <p>Your privacy is paramount. As detailed in our Privacy Policy, your conversations stay on your device (and optionally your iCloud). We do not store your session data on our servers. You are responsible for maintaining the security of your device and iCloud account.</p>
   </div>
 
-  <div class="contact-box">
-    <h2>Need help with the Terms?</h2>
-    <p>If you have any questions or suggestions about our Terms of Use, do not hesitate to contact us.</p>
-    <a href="mailto:support@moodshift.app">support@moodshift.app</a>
+  <div class="section">
+    <h2>Limitation of Liability</h2>
+    <p>MoodShift is provided "as is". To the maximum extent permitted by law, we shall not be liable for any damages arising from your use of the app, including any reliance on AI-generated reflections or the loss of data stored on your device.</p>
   </div>
 
-</div>
+  <div class="section">
+    <h2>Changes to Terms</h2>
+    <p>We may update these Terms to reflect new features or legal requirements. Continued use of the app after an update constitutes your acceptance of the new Terms.</p>
+  </div>
 
-<div class="footer">
-  MoodShift: CBT AI Coach © 2026 · All rights reserved · Terms of Use (EULA)
+  <div class="contact">
+    <h2>Questions?</h2>
+    <p>If you have any questions about these Terms, feel free to reach out to our team.</p>
+    <a href="mailto:support@moodshift.app" class="contact-btn">Contact Support</a>
+  </div>
+
+  <div class="footer">
+    <p>© 2026 MoodShift: CBT AI Coach &nbsp;·&nbsp; <span>Privacy by Design</span></p>
+  </div>
+
 </div>
 
 </body>
