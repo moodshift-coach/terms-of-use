@@ -30,6 +30,40 @@
   * { margin:0; padding:0; box-sizing:border-box; }
   body { background:var(--bg); color:var(--text); font-family:'DM Sans',sans-serif; font-size:16px; line-height:1.8; min-height:100vh; overflow-x:hidden; scroll-behavior: smooth; }
 
+  /* ── Language Switcher ── */
+  .lang-switcher {
+    position: fixed;
+    top: 20px;
+    right: 24px;
+    z-index: 100;
+    display: flex;
+    gap: 4px;
+    background: white;
+    border: 1px solid var(--border-strong);
+    border-radius: 100px;
+    padding: 4px;
+    box-shadow: 0 4px 20px rgba(124,111,205,0.15);
+  }
+  .lang-btn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-muted);
+    padding: 6px 12px;
+    border-radius: 100px;
+    transition: background 0.2s, color 0.2s;
+    letter-spacing: 0.5px;
+  }
+  .lang-btn:hover { color: var(--purple); }
+  .lang-btn.active {
+    background: var(--purple);
+    color: white;
+    box-shadow: 0 2px 8px rgba(124,111,205,0.35);
+  }
+
   .bg-rings {
     position:fixed; top:0; left:0; width:100%; height:100%;
     pointer-events:none; z-index:0; overflow:hidden;
@@ -84,14 +118,26 @@
   a { color:var(--purple); text-decoration:none; }
   a:hover { text-decoration:underline; }
 
+  /* hide all lang sections by default */
+  [data-lang] { display: none; }
+  [data-lang].active { display: block; }
+
   @media(max-width:600px){
-    .container{padding:48px 16px 80px}
+    .container{padding:60px 16px 80px}
     h1{font-size:30px}
     .contact{padding:32px 20px}
+    .lang-switcher{top:12px; right:12px;}
   }
 </style>
 </head>
 <body>
+
+<!-- ── Language Switcher ── -->
+<div class="lang-switcher" role="navigation" aria-label="Language selector">
+  <button class="lang-btn active" onclick="setLang('en')" aria-label="English">EN</button>
+  <button class="lang-btn" onclick="setLang('pl')" aria-label="Polski">PL</button>
+  <button class="lang-btn" onclick="setLang('de')" aria-label="Deutsch">DE</button>
+</div>
 
 <div class="bg-rings">
   <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
@@ -113,105 +159,345 @@
 
 <div class="container">
 
-  <div class="header">
-    <div class="logo">
-      <div class="logo-icon">
-        <svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17 5.8 21.3l2.4-7.4L2 9.4h7.6z"/></svg>
+  <!-- ════════════════════════════════
+       ENGLISH
+  ════════════════════════════════ -->
+  <div data-lang="en" class="active">
+
+    <div class="header">
+      <div class="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17 5.8 21.3l2.4-7.4L2 9.4h7.6z"/></svg>
+        </div>
+        <div>
+          <span class="logo-name">MoodShift</span>
+          <span class="logo-sub">CBT AI Coach</span>
+        </div>
       </div>
-      <div>
-        <span class="logo-name">MoodShift</span>
-        <span class="logo-sub">CBT AI Coach</span>
+      <h1>Terms of <em>Use</em></h1>
+      <div class="header-meta">
+        <span class="meta-pill">Effective: April 2026</span>
+        <span class="meta-pill">Version 1.1</span>
+        <span class="meta-pill">Apple EULA Standard</span>
       </div>
     </div>
-    <h1>Terms of <em>Use</em></h1>
-    <div class="header-meta">
-      <span class="meta-pill">Effective: April 2026</span>
-      <span class="meta-pill">Version 1.1</span>
-      <span class="meta-pill">Apple EULA Standard</span>
+
+    <div class="summary-card">
+      <p><strong>In short:</strong> By using <strong>MoodShift: CBT AI Coach</strong> (hereinafter referred to as "the App" or "MoodShift"), you agree to these rules. This app is a wellness tool for adults (18+), not a medical service. Subscriptions are handled by Apple, and you have full control over your data. Please read the medical disclaimer carefully.</p>
     </div>
-  </div>
 
-  <div class="summary-card">
-    <p><strong>In short:</strong> By using <strong>MoodShift: CBT AI Coach</strong> (hereinafter referred to as "the App" or "MoodShift"), you agree to these rules. This app is a wellness tool for adults (18+), not a medical service. Subscriptions are handled by Apple, and you have full control over your data. Please read the medical disclaimer carefully.</p>
-  </div>
-
-  <div class="section">
-    <h2>Agreement to Terms</h2>
-    <p><strong>MoodShift: CBT AI Coach</strong> (hereinafter referred to as "the App", "MoodShift", "we", or "us") provides an iOS application designed for emotional reflection and personal growth. By downloading or using the App, you agree to these Terms of Use and our Privacy Policy.</p>
-    <div class="block">
-      <span class="block-title">Age Requirement</span>
-      <p>The App is intended exclusively for users aged <strong>18 and older</strong>. By using MoodShift, you represent that you are at least 18 years of age. The App is not designed for or directed toward minors.</p>
+    <div class="section">
+      <h2>Agreement to Terms</h2>
+      <p><strong>MoodShift: CBT AI Coach</strong> (hereinafter referred to as "the App", "MoodShift", "we", or "us") provides an iOS application designed for emotional reflection and personal growth. By downloading or using the App, you agree to these Terms of Use and our Privacy Policy.</p>
+      <div class="block">
+        <span class="block-title">Age Requirement</span>
+        <p>The App is intended exclusively for users aged <strong>18 and older</strong>. By using MoodShift, you represent that you are at least 18 years of age. The App is not designed for or directed toward minors.</p>
+      </div>
     </div>
-  </div>
 
-  <div class="section">
-    <h2>Medical Disclaimer</h2>
-    <div class="block red-block">
-      <span class="block-title">⚠ IMPORTANT: NOT A MEDICAL SERVICE</span>
-      <p>MoodShift uses AI to provide Cognitive Behavioral Therapy (CBT) reflections. It is <strong>not a medical device</strong> and does not provide clinical diagnosis, therapy, or treatment.</p>
+    <div class="section">
+      <h2>Medical Disclaimer</h2>
+      <div class="block red-block">
+        <span class="block-title">⚠ IMPORTANT: NOT A MEDICAL SERVICE</span>
+        <p>MoodShift uses AI to provide Cognitive Behavioral Therapy (CBT) reflections. It is <strong>not a medical device</strong> and does not provide clinical diagnosis, therapy, or treatment.</p>
+        <ul>
+          <li>The AI (Claude) can make mistakes and is not a substitute for a human professional.</li>
+          <li>Do not ignore professional medical advice because of something you read in the app.</li>
+          <li><strong>Emergency:</strong> If you are thinking about self-harm or are in a crisis, contact your local emergency services or a mental health crisis helpline immediately.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Subscriptions &amp; Usage Limits</h2>
+      <p>MoodShift offers tiered access to its features. To ensure high quality and stability, we apply a <strong>Fair Usage Policy</strong>:</p>
       <ul>
-        <li>The AI (Claude) can make mistakes and is not a substitute for a human professional.</li>
-        <li>Do not ignore professional medical advice because of something you read in the app.</li>
-        <li><strong>Emergency:</strong> If you are thinking about self-harm or are in a crisis, contact your local emergency services or a mental health crisis helpline immediately.</li>
+        <li><strong>Free Plan:</strong> 3 text sessions per week. First 14 days powered by <strong>Sonnet 4.6</strong>; thereafter permanent access via the <strong>Haiku 4.5</strong> model.</li>
+        <li><strong>Premium Plan:</strong> Unlimited text-only sessions (standard 10/10 format) powered by <strong>Sonnet 4.6</strong>.</li>
+        <li><strong>Voice AI Plan:</strong> Unlimited text sessions (extended 15/15 format) plus 30 Voice AI sessions per month, all powered by <strong>Sonnet 4.6</strong>.</li>
+        <li><strong>Fair Usage:</strong> While text sessions are unlimited for subscribers, we reserve the right to limit access if patterns suggest automated (non-human) activity or abuse of the service.</li>
+      </ul>
+      <h3>Billing &amp; Local Data</h3>
+      <ul>
+        <li><strong>Payments:</strong> Charged to your Apple ID account via StoreKit at confirmation of purchase.</li>
+        <li><strong>Auto-Renewal:</strong> Subscriptions renew automatically unless canceled at least 24 hours before the end of the current period.</li>
+        <li><strong>Local Data:</strong> All your session data is stored locally on your device. Uninstalling the app will permanently delete all your history.</li>
+        <li><strong>Management:</strong> You can manage or cancel subscriptions in your App Store Account Settings.</li>
       </ul>
     </div>
-  </div>
 
-  <div class="section">
-    <h2>Subscriptions &amp; Usage Limits</h2>
-    <p>MoodShift offers tiered access to its features. To ensure high quality and stability, we apply a <strong>Fair Usage Policy</strong>:</p>
-    <ul>
-      <li><strong>Free Plan:</strong> 3 text sessions per week. First 14 days powered by <strong>Sonnet 4.6</strong>; thereafter permanent access via the <strong>Haiku 4.5</strong> model.</li>
-      <li><strong>Premium Plan:</strong> Unlimited text-only sessions (standard 10/10 format) powered by <strong>Sonnet 4.6</strong>.</li>
-      <li><strong>Voice AI Plan:</strong> Unlimited text sessions (extended 15/15 format) plus 30 Voice AI sessions per month, all powered by <strong>Sonnet 4.6</strong>.</li>
-      <li><strong>Fair Usage:</strong> While text sessions are unlimited for subscribers, we reserve the right to limit access if patterns suggest automated (non-human) activity or abuse of the service.</li>
-    </ul>
-    
-    <h3>Billing & Local Data</h3>
-    <ul>
-      <li><strong>Payments:</strong> Charged to your Apple ID account via StoreKit at confirmation of purchase.</li>
-      <li><strong>Auto-Renewal:</strong> Subscriptions renew automatically unless canceled at least 24 hours before the end of the current period.</li>
-      <li><strong>Local Data:</strong> All your session data is stored locally on your device. Uninstalling the app will permanently delete all your history.</li>
-      <li><strong>Management:</strong> You can manage or cancel subscriptions in your App Store Account Settings.</li>
-    </ul>
-  </div>
+    <div class="section">
+      <h2>License &amp; Restrictions</h2>
+      <p>We grant you a personal, non-transferable license to use the App for personal, non-commercial purposes. You agree not to:</p>
+      <ul>
+        <li>Copy, modify, or reverse engineer the application.</li>
+        <li>Use the AI coaching for any illegal or harmful purposes.</li>
+        <li>Bypass any session limits or security features.</li>
+      </ul>
+    </div>
 
-  <div class="section">
-    <h2>License &amp; Restrictions</h2>
-    <p>We grant you a personal, non-transferable license to use the App for personal, non-commercial purposes. You agree not to:</p>
-    <ul>
-      <li>Copy, modify, or reverse engineer the application.</li>
-      <li>Use the AI coaching for any illegal or harmful purposes.</li>
-      <li>Bypass any session limits or security features.</li>
-    </ul>
-  </div>
+    <div class="section">
+      <h2>Privacy &amp; Technical Identifiers</h2>
+      <p>Your privacy is paramount. As detailed in our Privacy Policy, your conversations stay on your device. We use an <strong>anonymous Device ID</strong> to manage trial periods and app stability. We do not use cloud backups. You are responsible for the security of your device.</p>
+    </div>
 
-  <div class="section">
-    <h2>Privacy &amp; Technical Identifiers</h2>
-    <p>Your privacy is paramount. As detailed in our Privacy Policy, your conversations stay on your device. We use an <strong>anonymous Device ID</strong> to manage trial periods and app stability. We do not use cloud backups. You are responsible for the security of your device.</p>
-  </div>
+    <div class="section">
+      <h2>Limitation of Liability</h2>
+      <p>MoodShift is provided "as is". To the maximum extent permitted by law, we shall not be liable for any damages arising from your use of the App, including any reliance on AI-generated reflections or the loss of data stored on your device.</p>
+    </div>
 
-  <div class="section">
-    <h2>Limitation of Liability</h2>
-    <p>MoodShift is provided "as is". To the maximum extent permitted by law, we shall not be liable for any damages arising from your use of the App, including any reliance on AI-generated reflections or the loss of data stored on your device.</p>
-  </div>
+    <div class="section">
+      <h2>Changes to Terms</h2>
+      <p>We may update these Terms to reflect new features or legal requirements. Continued use of the App after an update constitutes your acceptance of the new Terms. For significant changes, we will provide notice within the App.</p>
+    </div>
 
-  <div class="section">
-    <h2>Changes to Terms</h2>
-    <p>We may update these Terms to reflect new features or legal requirements. Continued use of the App after an update constitutes your acceptance of the new Terms. For significant changes, we will provide notice within the App.</p>
-  </div>
+    <div class="contact" id="contact">
+      <h2>Questions?</h2>
+      <p>If you have any questions about these Terms, feel free to reach out to our team.</p>
+      <a href="mailto:moodshift.coach@gmail.com" class="contact-btn">Contact Support</a>
+    </div>
 
-  <div class="contact" id="contact">
-    <h2>Questions?</h2>
-    <p>If you have any questions about these Terms, feel free to reach out to our team.</p>
-    <a href="mailto:moodshift.coach@gmail.com" class="contact-btn">Contact Support</a>
-  </div>
+    <div class="footer">
+      <p>© 2026 MoodShift: CBT AI Coach &nbsp;·&nbsp; <span>Privacy by Design</span></p>
+    </div>
 
-  <div class="footer">
-    <p>© 2026 MoodShift: CBT AI Coach &nbsp;·&nbsp; <span>Privacy by Design</span></p>
-  </div>
+  </div><!-- /en -->
 
-</div>
 
+  <!-- ════════════════════════════════
+       POLSKI
+  ════════════════════════════════ -->
+  <div data-lang="pl">
+
+    <div class="header">
+      <div class="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17 5.8 21.3l2.4-7.4L2 9.4h7.6z"/></svg>
+        </div>
+        <div>
+          <span class="logo-name">MoodShift</span>
+          <span class="logo-sub">CBT AI Coach</span>
+        </div>
+      </div>
+      <h1>Warunki <em>Użytkowania</em></h1>
+      <div class="header-meta">
+        <span class="meta-pill">Obowiązuje od: kwiecień 2026</span>
+        <span class="meta-pill">Wersja 1.1</span>
+        <span class="meta-pill">Standard Apple EULA</span>
+      </div>
+    </div>
+
+    <div class="summary-card">
+      <p><strong>Krótko mówiąc:</strong> Korzystając z <strong>MoodShift: CBT AI Coach</strong> (dalej zwanego „Aplikacją" lub „MoodShift"), wyrażasz zgodę na poniższe zasady. Aplikacja jest narzędziem wellness dla dorosłych (18+), a nie usługą medyczną. Subskrypcje są obsługiwane przez Apple, a Ty masz pełną kontrolę nad swoimi danymi. Prosimy o uważne przeczytanie zastrzeżenia medycznego.</p>
+    </div>
+
+    <div class="section">
+      <h2>Akceptacja warunków</h2>
+      <p><strong>MoodShift: CBT AI Coach</strong> (dalej zwany „Aplikacją", „MoodShift", „my" lub „nas") udostępnia aplikację iOS zaprojektowaną do refleksji emocjonalnej i osobistego rozwoju. Pobierając lub używając Aplikacji, wyrażasz zgodę na niniejsze Warunki Użytkowania oraz naszą Politykę Prywatności.</p>
+      <div class="block">
+        <span class="block-title">Wymóg wieku</span>
+        <p>Aplikacja jest przeznaczona wyłącznie dla użytkowników w wieku <strong>18 lat i starszych</strong>. Korzystając z MoodShift, oświadczasz, że masz co najmniej 18 lat. Aplikacja nie jest zaprojektowana ani skierowana do osób niepełnoletnich.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Zastrzeżenie medyczne</h2>
+      <div class="block red-block">
+        <span class="block-title">⚠ WAŻNE: NIE JEST TO USŁUGA MEDYCZNA</span>
+        <p>MoodShift używa AI do dostarczania refleksji z zakresu Terapii Poznawczo-Behawioralnej (CBT). <strong>Nie jest urządzeniem medycznym</strong> i nie zapewnia klinicznej diagnozy, terapii ani leczenia.</p>
+        <ul>
+          <li>AI (Claude) może popełniać błędy i nie zastępuje specjalisty.</li>
+          <li>Nie ignoruj profesjonalnych porad medycznych na podstawie treści z aplikacji.</li>
+          <li><strong>Nagła potrzeba:</strong> Jeśli masz myśli samobójcze lub jesteś w sytuacji kryzysowej, natychmiast skontaktuj się ze służbami ratunkowymi lub telefonem zaufania dla osób w kryzysie psychicznym.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Subskrypcje i limity użytkowania</h2>
+      <p>MoodShift oferuje wielopoziomowy dostęp do funkcji. Aby zapewnić wysoką jakość i stabilność, stosujemy <strong>Politykę Uczciwego Użytkowania</strong>:</p>
+      <ul>
+        <li><strong>Plan Bezpłatny:</strong> 3 sesje tekstowe tygodniowo. Pierwsze 14 dni obsługiwane przez <strong>Sonnet 4.6</strong>; następnie stały dostęp przez model <strong>Haiku 4.5</strong>.</li>
+        <li><strong>Plan Premium:</strong> Nieograniczone sesje tekstowe (standardowy format 10/10) obsługiwane przez <strong>Sonnet 4.6</strong>.</li>
+        <li><strong>Plan Voice AI:</strong> Nieograniczone sesje tekstowe (rozszerzony format 15/15) oraz 30 sesji Voice AI miesięcznie, wszystkie obsługiwane przez <strong>Sonnet 4.6</strong>.</li>
+        <li><strong>Uczciwe użytkowanie:</strong> Mimo że sesje tekstowe są nieograniczone dla subskrybentów, zastrzegamy sobie prawo do ograniczenia dostępu, jeśli wzorce sugerują zautomatyzowaną (nieludzką) aktywność lub nadużywanie usługi.</li>
+      </ul>
+      <h3>Płatności i dane lokalne</h3>
+      <ul>
+        <li><strong>Płatności:</strong> Pobierane z konta Apple ID przez StoreKit w momencie potwierdzenia zakupu.</li>
+        <li><strong>Automatyczne odnowienie:</strong> Subskrypcje odnawiają się automatycznie, chyba że zostaną anulowane co najmniej 24 godziny przed końcem bieżącego okresu.</li>
+        <li><strong>Dane lokalne:</strong> Wszystkie dane sesji są przechowywane lokalnie na Twoim urządzeniu. Odinstalowanie aplikacji trwale usunie całą historię.</li>
+        <li><strong>Zarządzanie:</strong> Subskrypcjami możesz zarządzać lub je anulować w Ustawieniach konta App Store.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Licencja i ograniczenia</h2>
+      <p>Udzielamy Ci osobistej, niezbywalnej licencji na korzystanie z Aplikacji w celach osobistych i niekomercyjnych. Zgadzasz się nie:</p>
+      <ul>
+        <li>Kopiować, modyfikować ani dekompilować aplikacji.</li>
+        <li>Używać coachingu AI do celów nielegalnych lub szkodliwych.</li>
+        <li>Omijać limitów sesji ani zabezpieczeń aplikacji.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Prywatność i identyfikatory techniczne</h2>
+      <p>Twoja prywatność jest priorytetem. Jak opisano w naszej Polityce Prywatności, Twoje rozmowy pozostają na Twoim urządzeniu. Używamy <strong>anonimowego identyfikatora urządzenia</strong> do zarządzania okresami próbnymi i stabilnością aplikacji. Nie korzystamy z kopii zapasowych w chmurze. Jesteś odpowiedzialny za bezpieczeństwo swojego urządzenia.</p>
+    </div>
+
+    <div class="section">
+      <h2>Ograniczenie odpowiedzialności</h2>
+      <p>MoodShift jest udostępniany „w stanie takim, w jakim jest". W maksymalnym zakresie dozwolonym przez prawo nie ponosimy odpowiedzialności za jakiekolwiek szkody wynikające z korzystania z Aplikacji, w tym za poleganie na refleksjach generowanych przez AI lub utratę danych przechowywanych na Twoim urządzeniu.</p>
+    </div>
+
+    <div class="section">
+      <h2>Zmiany warunków</h2>
+      <p>Możemy aktualizować niniejsze Warunki, aby odzwierciedlić nowe funkcje lub wymogi prawne. Dalsze korzystanie z Aplikacji po aktualizacji oznacza akceptację nowych Warunków. W przypadku istotnych zmian poinformujemy Cię w Aplikacji.</p>
+    </div>
+
+    <div class="contact" id="contact-pl">
+      <h2>Pytania?</h2>
+      <p>Jeśli masz pytania dotyczące tych Warunków, skontaktuj się z naszym zespołem.</p>
+      <a href="mailto:moodshift.coach@gmail.com" class="contact-btn">Skontaktuj się z pomocą</a>
+    </div>
+
+    <div class="footer">
+      <p>© 2026 MoodShift: CBT AI Coach &nbsp;·&nbsp; <span>Privacy by Design</span></p>
+    </div>
+
+  </div><!-- /pl -->
+
+
+  <!-- ════════════════════════════════
+       DEUTSCH
+  ════════════════════════════════ -->
+  <div data-lang="de">
+
+    <div class="header">
+      <div class="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17 5.8 21.3l2.4-7.4L2 9.4h7.6z"/></svg>
+        </div>
+        <div>
+          <span class="logo-name">MoodShift</span>
+          <span class="logo-sub">CBT AI Coach</span>
+        </div>
+      </div>
+      <h1>Nutzungs&shy;<em>bedingungen</em></h1>
+      <div class="header-meta">
+        <span class="meta-pill">Gültig ab: April 2026</span>
+        <span class="meta-pill">Version 1.1</span>
+        <span class="meta-pill">Apple EULA Standard</span>
+      </div>
+    </div>
+
+    <div class="summary-card">
+      <p><strong>Kurzfassung:</strong> Durch die Nutzung von <strong>MoodShift: CBT AI Coach</strong> (nachfolgend „die App" oder „MoodShift") stimmst du diesen Regeln zu. Diese App ist ein Wellness-Tool für Erwachsene (18+), kein medizinischer Dienst. Abonnements werden über Apple abgewickelt, und du hast die volle Kontrolle über deine Daten. Bitte lies den medizinischen Haftungsausschluss sorgfältig durch.</p>
+    </div>
+
+    <div class="section">
+      <h2>Zustimmung zu den Bedingungen</h2>
+      <p><strong>MoodShift: CBT AI Coach</strong> (nachfolgend „die App", „MoodShift", „wir" oder „uns") stellt eine iOS-Anwendung zur emotionalen Reflexion und persönlichen Entwicklung bereit. Durch das Herunterladen oder die Nutzung der App stimmst du diesen Nutzungsbedingungen und unserer Datenschutzerklärung zu.</p>
+      <div class="block">
+        <span class="block-title">Altersanforderung</span>
+        <p>Die App richtet sich ausschließlich an Nutzer ab <strong>18 Jahren</strong>. Durch die Nutzung von MoodShift bestätigst du, dass du mindestens 18 Jahre alt bist. Die App ist nicht für Minderjährige konzipiert oder bestimmt.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Medizinischer Haftungsausschluss</h2>
+      <div class="block red-block">
+        <span class="block-title">⚠ WICHTIG: KEIN MEDIZINISCHER DIENST</span>
+        <p>MoodShift nutzt KI zur Bereitstellung von Reflexionen im Bereich der Kognitiven Verhaltenstherapie (KVT/CBT). Es handelt sich <strong>nicht um ein Medizinprodukt</strong> und bietet keine klinische Diagnose, Therapie oder Behandlung.</p>
+        <ul>
+          <li>Die KI (Claude) kann Fehler machen und ist kein Ersatz für einen menschlichen Fachmann.</li>
+          <li>Ignoriere keine professionellen medizinischen Ratschläge aufgrund von Inhalten in der App.</li>
+          <li><strong>Notfall:</strong> Wenn du Gedanken an Selbstverletzung hast oder dich in einer Krisensituation befindest, wende dich sofort an den Notruf oder eine Krisenhotline für psychische Gesundheit.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Abonnements &amp; Nutzungslimits</h2>
+      <p>MoodShift bietet gestaffelten Zugang zu seinen Funktionen. Um hohe Qualität und Stabilität zu gewährleisten, wenden wir eine <strong>Fair-Use-Richtlinie</strong> an:</p>
+      <ul>
+        <li><strong>Kostenloser Plan:</strong> 3 Text-Sitzungen pro Woche. Die ersten 14 Tage werden von <strong>Sonnet 4.6</strong> betrieben; danach dauerhafter Zugang über das <strong>Haiku 4.5</strong>-Modell.</li>
+        <li><strong>Premium-Plan:</strong> Unbegrenzte reine Text-Sitzungen (Standardformat 10/10), betrieben von <strong>Sonnet 4.6</strong>.</li>
+        <li><strong>Voice-AI-Plan:</strong> Unbegrenzte Text-Sitzungen (erweitertes Format 15/15) sowie 30 Voice-AI-Sitzungen pro Monat, alle betrieben von <strong>Sonnet 4.6</strong>.</li>
+        <li><strong>Fair Use:</strong> Obwohl Text-Sitzungen für Abonnenten unbegrenzt sind, behalten wir uns das Recht vor, den Zugang zu beschränken, wenn Muster auf automatisierte (nicht-menschliche) Aktivitäten oder Missbrauch des Dienstes hinweisen.</li>
+      </ul>
+      <h3>Abrechnung &amp; lokale Daten</h3>
+      <ul>
+        <li><strong>Zahlungen:</strong> Werden bei Kaufbestätigung über StoreKit deiner Apple-ID in Rechnung gestellt.</li>
+        <li><strong>Automatische Verlängerung:</strong> Abonnements verlängern sich automatisch, sofern sie nicht mindestens 24 Stunden vor Ende des aktuellen Zeitraums gekündigt werden.</li>
+        <li><strong>Lokale Daten:</strong> Alle Sitzungsdaten werden lokal auf deinem Gerät gespeichert. Die Deinstallation der App löscht deinen gesamten Verlauf dauerhaft.</li>
+        <li><strong>Verwaltung:</strong> Du kannst Abonnements in deinen App-Store-Kontoeinstellungen verwalten oder kündigen.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Lizenz &amp; Einschränkungen</h2>
+      <p>Wir gewähren dir eine persönliche, nicht übertragbare Lizenz zur Nutzung der App für persönliche, nicht-kommerzielle Zwecke. Du verpflichtest dich, Folgendes zu unterlassen:</p>
+      <ul>
+        <li>Kopieren, Modifizieren oder Reverse Engineering der Anwendung.</li>
+        <li>Nutzung des KI-Coachings für illegale oder schädliche Zwecke.</li>
+        <li>Umgehung von Sitzungslimits oder Sicherheitsfunktionen.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Datenschutz &amp; technische Identifikatoren</h2>
+      <p>Dein Datenschutz hat höchste Priorität. Wie in unserer Datenschutzerklärung beschrieben, verbleiben deine Gespräche auf deinem Gerät. Wir verwenden eine <strong>anonyme Geräte-ID</strong> zur Verwaltung von Testzeiträumen und App-Stabilität. Wir nutzen keine Cloud-Backups. Du bist für die Sicherheit deines Geräts verantwortlich.</p>
+    </div>
+
+    <div class="section">
+      <h2>Haftungsbeschränkung</h2>
+      <p>MoodShift wird „wie besehen" bereitgestellt. Im maximal gesetzlich zulässigen Umfang haften wir nicht für Schäden, die aus der Nutzung der App entstehen, einschließlich des Vertrauens auf KI-generierte Reflexionen oder des Verlusts von auf deinem Gerät gespeicherten Daten.</p>
+    </div>
+
+    <div class="section">
+      <h2>Änderungen der Bedingungen</h2>
+      <p>Wir können diese Bedingungen aktualisieren, um neue Funktionen oder rechtliche Anforderungen zu berücksichtigen. Die weitere Nutzung der App nach einer Aktualisierung gilt als Zustimmung zu den neuen Bedingungen. Bei wesentlichen Änderungen werden wir dich in der App benachrichtigen.</p>
+    </div>
+
+    <div class="contact" id="contact-de">
+      <h2>Fragen?</h2>
+      <p>Wenn du Fragen zu diesen Bedingungen hast, wende dich gerne an unser Team.</p>
+      <a href="mailto:moodshift.coach@gmail.com" class="contact-btn">Support kontaktieren</a>
+    </div>
+
+    <div class="footer">
+      <p>© 2026 MoodShift: CBT AI Coach &nbsp;·&nbsp; <span>Privacy by Design</span></p>
+    </div>
+
+  </div><!-- /de -->
+
+</div><!-- /container -->
+
+<script>
+  function setLang(lang) {
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-lang]').forEach(el => {
+      el.classList.toggle('active', el.dataset.lang === lang);
+    });
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.textContent.trim().toLowerCase() === lang);
+    });
+    try { localStorage.setItem('moodshift-lang', lang); } catch(e) {}
+  }
+
+  (function() {
+    let saved;
+    try { saved = localStorage.getItem('moodshift-lang'); } catch(e) {}
+    if (saved && ['en','pl','de'].includes(saved)) {
+      setLang(saved);
+      return;
+    }
+    const nav = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+    if (nav.startsWith('pl')) setLang('pl');
+    else if (nav.startsWith('de')) setLang('de');
+  })();
+</script>
 </body>
 </html>
