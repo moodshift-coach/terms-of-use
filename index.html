@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Terms of Use — MoodShift: CBT AI Coach</title>
+<title>Terms of Use — MoodShift: AI Wellness Coach</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap');
   :root {
@@ -30,44 +30,22 @@
   * { margin:0; padding:0; box-sizing:border-box; }
   body { background:var(--bg); color:var(--text); font-family:'DM Sans',sans-serif; font-size:16px; line-height:1.8; min-height:100vh; overflow-x:hidden; scroll-behavior: smooth; }
 
-  /* ── Language Switcher ── */
   .lang-switcher {
-    position: fixed;
-    top: 20px;
-    right: 24px;
-    z-index: 100;
-    display: flex;
-    gap: 4px;
-    background: white;
-    border: 1px solid var(--border-strong);
-    border-radius: 100px;
-    padding: 4px;
-    box-shadow: 0 4px 20px rgba(124,111,205,0.15);
+    position: fixed; top: 20px; right: 24px; z-index: 100;
+    display: flex; gap: 4px; background: white;
+    border: 1px solid var(--border-strong); border-radius: 100px;
+    padding: 4px; box-shadow: 0 4px 20px rgba(124,111,205,0.15);
   }
   .lang-btn {
-    border: none;
-    background: transparent;
-    cursor: pointer;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 12px;
-    font-weight: 500;
-    color: var(--text-muted);
-    padding: 6px 12px;
-    border-radius: 100px;
-    transition: background 0.2s, color 0.2s;
-    letter-spacing: 0.5px;
+    border: none; background: transparent; cursor: pointer;
+    font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 500;
+    color: var(--text-muted); padding: 6px 12px; border-radius: 100px;
+    transition: background 0.2s, color 0.2s; letter-spacing: 0.5px;
   }
   .lang-btn:hover { color: var(--purple); }
-  .lang-btn.active {
-    background: var(--purple);
-    color: white;
-    box-shadow: 0 2px 8px rgba(124,111,205,0.35);
-  }
+  .lang-btn.active { background: var(--purple); color: white; box-shadow: 0 2px 8px rgba(124,111,205,0.35); }
 
-  .bg-rings {
-    position:fixed; top:0; left:0; width:100%; height:100%;
-    pointer-events:none; z-index:0; overflow:hidden;
-  }
+  .bg-rings { position:fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:0; overflow:hidden; }
   .bg-rings svg { width:100%; height:100%; }
 
   .container { position:relative; z-index:1; max-width:760px; margin:0 auto; padding:80px 24px 120px; }
@@ -82,8 +60,6 @@
   h1 em { font-style:italic; color:var(--purple); }
   .header-meta { display:flex; align-items:center; justify-content:center; gap:12px; flex-wrap:wrap; }
   .meta-pill { background:white; border:0.5px solid var(--border-strong); border-radius:100px; padding:6px 18px; font-size:13px; color:var(--purple); font-weight:500; }
-
-  .divider { width:60px; height:2px; background:linear-gradient(90deg,transparent,var(--purple),transparent); margin:48px auto; border:none; }
 
   .summary-card { background:linear-gradient(135deg,rgba(124,111,205,0.08),rgba(197,191,240,0.12)); border:1px solid var(--border-strong); border-radius:24px; padding:32px; margin-bottom:48px; }
   .summary-card p { color:var(--text-body); font-size:15px; line-height:1.9; }
@@ -118,7 +94,6 @@
   a { color:var(--purple); text-decoration:none; }
   a:hover { text-decoration:underline; }
 
-  /* hide all lang sections by default */
   [data-lang] { display: none; }
   [data-lang].active { display: block; }
 
@@ -132,7 +107,6 @@
 </head>
 <body>
 
-<!-- ── Language Switcher ── -->
 <div class="lang-switcher" role="navigation" aria-label="Language selector">
   <button class="lang-btn active" onclick="setLang('en')" aria-label="English">EN</button>
   <button class="lang-btn" onclick="setLang('pl')" aria-label="Polski">PL</button>
@@ -159,47 +133,36 @@
 
 <div class="container">
 
-  <!-- ════════════════════════════════
-       ENGLISH
-  ════════════════════════════════ -->
+  <!-- ════ ENGLISH ════ -->
   <div data-lang="en" class="active">
-
     <div class="header">
       <div class="logo">
-        <div class="logo-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17 5.8 21.3l2.4-7.4L2 9.4h7.6z"/></svg>
-        </div>
-        <div>
-          <span class="logo-name">MoodShift</span>
-          <span class="logo-sub">CBT AI Coach</span>
-        </div>
+        <div class="logo-icon"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17 5.8 21.3l2.4-7.4L2 9.4h7.6z"/></svg></div>
+        <div><span class="logo-name">MoodShift</span><span class="logo-sub">AI Wellness Coach</span></div>
       </div>
       <h1>Terms of <em>Use</em></h1>
       <div class="header-meta">
-        <span class="meta-pill">Effective: April 2026</span>
-        <span class="meta-pill">Version 1.1</span>
+        <span class="meta-pill">Effective: May 2026</span>
+        <span class="meta-pill">Version 1.0</span>
         <span class="meta-pill">Apple EULA Standard</span>
       </div>
     </div>
-
     <div class="summary-card">
-      <p><strong>In short:</strong> By using <strong>MoodShift: CBT AI Coach</strong> (hereinafter referred to as "the App" or "MoodShift"), you agree to these rules. This app is a wellness tool for adults (18+), not a medical service. Subscriptions are handled by Apple, and you have full control over your data. Please read the medical disclaimer carefully.</p>
+      <p><strong>The short version:</strong> By using <strong>MoodShift: AI Wellness Coach</strong> (hereinafter referred to as "the App" or "MoodShift"), you agree to these rules. This app is a wellness tool for adults (18+), not a medical service. Subscriptions are handled by Apple, and you have full control over your data. Please read the medical disclaimer carefully.</p>
     </div>
-
     <div class="section">
       <h2>Agreement to Terms</h2>
-      <p><strong>MoodShift: CBT AI Coach</strong> (hereinafter referred to as "the App", "MoodShift", "we", or "us") provides an iOS application designed for emotional reflection and personal growth. By downloading or using the App, you agree to these Terms of Use and our Privacy Policy.</p>
+      <p><strong>MoodShift: AI Wellness Coach</strong> (hereinafter referred to as "the App", "MoodShift", "we", or "us") provides an iOS application designed for emotional reflection and personal growth. By downloading or using the App, you agree to these Terms of Use and our Privacy Policy.</p>
       <div class="block">
         <span class="block-title">Age Requirement</span>
         <p>The App is intended exclusively for users aged <strong>18 and older</strong>. By using MoodShift, you represent that you are at least 18 years of age. The App is not designed for or directed toward minors.</p>
       </div>
     </div>
-
     <div class="section">
       <h2>Medical Disclaimer</h2>
       <div class="block red-block">
         <span class="block-title">⚠ IMPORTANT: NOT A MEDICAL SERVICE</span>
-        <p>MoodShift uses AI to provide Cognitive Behavioral Therapy (CBT) reflections. It is <strong>not a medical device</strong> and does not provide clinical diagnosis, therapy, or treatment.</p>
+        <p>MoodShift uses AI to support emotional reflection and personal well-being. It is <strong>not a medical device</strong> and does not provide clinical diagnosis, therapy, or treatment.</p>
         <ul>
           <li>The AI (Claude) can make mistakes and is not a substitute for a human professional.</li>
           <li>Do not ignore professional medical advice because of something you read in the app.</li>
@@ -207,7 +170,6 @@
         </ul>
       </div>
     </div>
-
     <div class="section">
       <h2>Subscriptions &amp; Usage Limits</h2>
       <p>MoodShift offers tiered access to its features. To ensure high quality and stability, we apply a <strong>Fair Usage Policy</strong>:</p>
@@ -225,7 +187,6 @@
         <li><strong>Management:</strong> You can manage or cancel subscriptions in your App Store Account Settings.</li>
       </ul>
     </div>
-
     <div class="section">
       <h2>License &amp; Restrictions</h2>
       <p>We grant you a personal, non-transferable license to use the App for personal, non-commercial purposes. You agree not to:</p>
@@ -235,76 +196,60 @@
         <li>Bypass any session limits or security features.</li>
       </ul>
     </div>
-
     <div class="section">
       <h2>Privacy &amp; Technical Identifiers</h2>
       <p>Your privacy is paramount. As detailed in our Privacy Policy, your conversations stay on your device. We use an <strong>anonymous Device ID</strong> to manage trial periods and app stability. We do not use cloud backups. You are responsible for the security of your device.</p>
     </div>
-
     <div class="section">
       <h2>Limitation of Liability</h2>
       <p>MoodShift is provided "as is". To the maximum extent permitted by law, we shall not be liable for any damages arising from your use of the App, including any reliance on AI-generated reflections or the loss of data stored on your device.</p>
     </div>
-
     <div class="section">
       <h2>Changes to Terms</h2>
       <p>We may update these Terms to reflect new features or legal requirements. Continued use of the App after an update constitutes your acceptance of the new Terms. For significant changes, we will provide notice within the App.</p>
     </div>
-
     <div class="contact" id="contact">
       <h2>Questions?</h2>
       <p>If you have any questions about these Terms, feel free to reach out to our team.</p>
       <a href="mailto:moodshift.coach@gmail.com" class="contact-btn">Contact Support</a>
     </div>
-
     <div class="footer">
-      <p>© 2026 MoodShift: CBT AI Coach &nbsp;·&nbsp; <span>Privacy by Design</span></p>
+      <p>© 2026 MoodShift: AI Wellness Coach &nbsp;·&nbsp; <span>Privacy by Design</span></p>
+      <p style="margin-top:8px">Version 1.0 &nbsp;·&nbsp; Effective May 2026</p>
     </div>
-
   </div><!-- /en -->
 
 
-  <!-- ════════════════════════════════
-       POLSKI
-  ════════════════════════════════ -->
+  <!-- ════ POLSKI ════ -->
   <div data-lang="pl">
-
     <div class="header">
       <div class="logo">
-        <div class="logo-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17 5.8 21.3l2.4-7.4L2 9.4h7.6z"/></svg>
-        </div>
-        <div>
-          <span class="logo-name">MoodShift</span>
-          <span class="logo-sub">CBT AI Coach</span>
-        </div>
+        <div class="logo-icon"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17 5.8 21.3l2.4-7.4L2 9.4h7.6z"/></svg></div>
+        <div><span class="logo-name">MoodShift</span><span class="logo-sub">AI Wellness Coach</span></div>
       </div>
       <h1>Warunki <em>Użytkowania</em></h1>
       <div class="header-meta">
-        <span class="meta-pill">Obowiązuje od: kwiecień 2026</span>
-        <span class="meta-pill">Wersja 1.1</span>
+        <span class="meta-pill">Obowiązuje od: maj 2026</span>
+        <span class="meta-pill">Wersja 1.0</span>
         <span class="meta-pill">Standard Apple EULA</span>
       </div>
     </div>
-
     <div class="summary-card">
-      <p><strong>Krótko mówiąc:</strong> Korzystając z <strong>MoodShift: CBT AI Coach</strong> (dalej zwanego „Aplikacją" lub „MoodShift"), wyrażasz zgodę na poniższe zasady. Aplikacja jest narzędziem wellness dla dorosłych (18+), a nie usługą medyczną. Subskrypcje są obsługiwane przez Apple, a Ty masz pełną kontrolę nad swoimi danymi. Prosimy o uważne przeczytanie zastrzeżenia medycznego.</p>
+      <p><strong>Krótka wersja:</strong> Korzystając z <strong>MoodShift: AI Wellness Coach</strong> (dalej zwanego „Aplikacją" lub „MoodShift"), wyrażasz zgodę na poniższe zasady. Aplikacja jest narzędziem wellness dla dorosłych (18+), a nie usługą medyczną. Subskrypcje są obsługiwane przez Apple, a Ty masz pełną kontrolę nad swoimi danymi. Prosimy o uważne przeczytanie zastrzeżenia medycznego.</p>
     </div>
-
     <div class="section">
       <h2>Akceptacja warunków</h2>
-      <p><strong>MoodShift: CBT AI Coach</strong> (dalej zwany „Aplikacją", „MoodShift", „my" lub „nas") udostępnia aplikację iOS zaprojektowaną do refleksji emocjonalnej i osobistego rozwoju. Pobierając lub używając Aplikacji, wyrażasz zgodę na niniejsze Warunki Użytkowania oraz naszą Politykę Prywatności.</p>
+      <p><strong>MoodShift: AI Wellness Coach</strong> (dalej zwany „Aplikacją", „MoodShift", „my" lub „nas") udostępnia aplikację iOS zaprojektowaną do refleksji emocjonalnej i osobistego rozwoju. Pobierając lub używając Aplikacji, wyrażasz zgodę na niniejsze Warunki Użytkowania oraz naszą Politykę Prywatności.</p>
       <div class="block">
         <span class="block-title">Wymóg wieku</span>
         <p>Aplikacja jest przeznaczona wyłącznie dla użytkowników w wieku <strong>18 lat i starszych</strong>. Korzystając z MoodShift, oświadczasz, że masz co najmniej 18 lat. Aplikacja nie jest zaprojektowana ani skierowana do osób niepełnoletnich.</p>
       </div>
     </div>
-
     <div class="section">
       <h2>Zastrzeżenie medyczne</h2>
       <div class="block red-block">
         <span class="block-title">⚠ WAŻNE: NIE JEST TO USŁUGA MEDYCZNA</span>
-        <p>MoodShift używa AI do dostarczania refleksji z zakresu Terapii Poznawczo-Behawioralnej (CBT). <strong>Nie jest urządzeniem medycznym</strong> i nie zapewnia klinicznej diagnozy, terapii ani leczenia.</p>
+        <p>MoodShift używa AI do wspierania refleksji emocjonalnej i dobrostanu osobistego. <strong>Nie jest urządzeniem medycznym</strong> i nie zapewnia klinicznej diagnozy, terapii ani leczenia.</p>
         <ul>
           <li>AI (Claude) może popełniać błędy i nie zastępuje specjalisty.</li>
           <li>Nie ignoruj profesjonalnych porad medycznych na podstawie treści z aplikacji.</li>
@@ -312,7 +257,6 @@
         </ul>
       </div>
     </div>
-
     <div class="section">
       <h2>Subskrypcje i limity użytkowania</h2>
       <p>MoodShift oferuje wielopoziomowy dostęp do funkcji. Aby zapewnić wysoką jakość i stabilność, stosujemy <strong>Politykę Uczciwego Użytkowania</strong>:</p>
@@ -330,7 +274,6 @@
         <li><strong>Zarządzanie:</strong> Subskrypcjami możesz zarządzać lub je anulować w Ustawieniach konta App Store.</li>
       </ul>
     </div>
-
     <div class="section">
       <h2>Licencja i ograniczenia</h2>
       <p>Udzielamy Ci osobistej, niezbywalnej licencji na korzystanie z Aplikacji w celach osobistych i niekomercyjnych. Zgadzasz się nie:</p>
@@ -340,76 +283,60 @@
         <li>Omijać limitów sesji ani zabezpieczeń aplikacji.</li>
       </ul>
     </div>
-
     <div class="section">
       <h2>Prywatność i identyfikatory techniczne</h2>
       <p>Twoja prywatność jest priorytetem. Jak opisano w naszej Polityce Prywatności, Twoje rozmowy pozostają na Twoim urządzeniu. Używamy <strong>anonimowego identyfikatora urządzenia</strong> do zarządzania okresami próbnymi i stabilnością aplikacji. Nie korzystamy z kopii zapasowych w chmurze. Jesteś odpowiedzialny za bezpieczeństwo swojego urządzenia.</p>
     </div>
-
     <div class="section">
       <h2>Ograniczenie odpowiedzialności</h2>
       <p>MoodShift jest udostępniany „w stanie takim, w jakim jest". W maksymalnym zakresie dozwolonym przez prawo nie ponosimy odpowiedzialności za jakiekolwiek szkody wynikające z korzystania z Aplikacji, w tym za poleganie na refleksjach generowanych przez AI lub utratę danych przechowywanych na Twoim urządzeniu.</p>
     </div>
-
     <div class="section">
       <h2>Zmiany warunków</h2>
       <p>Możemy aktualizować niniejsze Warunki, aby odzwierciedlić nowe funkcje lub wymogi prawne. Dalsze korzystanie z Aplikacji po aktualizacji oznacza akceptację nowych Warunków. W przypadku istotnych zmian poinformujemy Cię w Aplikacji.</p>
     </div>
-
     <div class="contact" id="contact-pl">
       <h2>Pytania?</h2>
       <p>Jeśli masz pytania dotyczące tych Warunków, skontaktuj się z naszym zespołem.</p>
       <a href="mailto:moodshift.coach@gmail.com" class="contact-btn">Skontaktuj się z pomocą</a>
     </div>
-
     <div class="footer">
-      <p>© 2026 MoodShift: CBT AI Coach &nbsp;·&nbsp; <span>Privacy by Design</span></p>
+      <p>© 2026 MoodShift: AI Wellness Coach &nbsp;·&nbsp; <span>Privacy by Design</span></p>
+      <p style="margin-top:8px">Wersja 1.0 &nbsp;·&nbsp; Obowiązuje od maja 2026</p>
     </div>
-
   </div><!-- /pl -->
 
 
-  <!-- ════════════════════════════════
-       DEUTSCH
-  ════════════════════════════════ -->
+  <!-- ════ DEUTSCH ════ -->
   <div data-lang="de">
-
     <div class="header">
       <div class="logo">
-        <div class="logo-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17 5.8 21.3l2.4-7.4L2 9.4h7.6z"/></svg>
-        </div>
-        <div>
-          <span class="logo-name">MoodShift</span>
-          <span class="logo-sub">CBT AI Coach</span>
-        </div>
+        <div class="logo-icon"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17 5.8 21.3l2.4-7.4L2 9.4h7.6z"/></svg></div>
+        <div><span class="logo-name">MoodShift</span><span class="logo-sub">AI Wellness Coach</span></div>
       </div>
       <h1>Nutzungs&shy;<em>bedingungen</em></h1>
       <div class="header-meta">
-        <span class="meta-pill">Gültig ab: April 2026</span>
-        <span class="meta-pill">Version 1.1</span>
+        <span class="meta-pill">Gültig ab: Mai 2026</span>
+        <span class="meta-pill">Version 1.0</span>
         <span class="meta-pill">Apple EULA Standard</span>
       </div>
     </div>
-
     <div class="summary-card">
-      <p><strong>Kurzfassung:</strong> Durch die Nutzung von <strong>MoodShift: CBT AI Coach</strong> (nachfolgend „die App" oder „MoodShift") stimmst du diesen Regeln zu. Diese App ist ein Wellness-Tool für Erwachsene (18+), kein medizinischer Dienst. Abonnements werden über Apple abgewickelt, und du hast die volle Kontrolle über deine Daten. Bitte lies den medizinischen Haftungsausschluss sorgfältig durch.</p>
+      <p><strong>Kurzfassung:</strong> Durch die Nutzung von <strong>MoodShift: AI Wellness Coach</strong> (nachfolgend „die App" oder „MoodShift") stimmst du diesen Regeln zu. Diese App ist ein Wellness-Tool für Erwachsene (18+), kein medizinischer Dienst. Abonnements werden über Apple abgewickelt, und du hast die volle Kontrolle über deine Daten. Bitte lies den medizinischen Haftungsausschluss sorgfältig durch.</p>
     </div>
-
     <div class="section">
       <h2>Zustimmung zu den Bedingungen</h2>
-      <p><strong>MoodShift: CBT AI Coach</strong> (nachfolgend „die App", „MoodShift", „wir" oder „uns") stellt eine iOS-Anwendung zur emotionalen Reflexion und persönlichen Entwicklung bereit. Durch das Herunterladen oder die Nutzung der App stimmst du diesen Nutzungsbedingungen und unserer Datenschutzerklärung zu.</p>
+      <p><strong>MoodShift: AI Wellness Coach</strong> (nachfolgend „die App", „MoodShift", „wir" oder „uns") stellt eine iOS-Anwendung zur emotionalen Reflexion und persönlichen Entwicklung bereit. Durch das Herunterladen oder die Nutzung der App stimmst du diesen Nutzungsbedingungen und unserer Datenschutzerklärung zu.</p>
       <div class="block">
         <span class="block-title">Altersanforderung</span>
         <p>Die App richtet sich ausschließlich an Nutzer ab <strong>18 Jahren</strong>. Durch die Nutzung von MoodShift bestätigst du, dass du mindestens 18 Jahre alt bist. Die App ist nicht für Minderjährige konzipiert oder bestimmt.</p>
       </div>
     </div>
-
     <div class="section">
       <h2>Medizinischer Haftungsausschluss</h2>
       <div class="block red-block">
         <span class="block-title">⚠ WICHTIG: KEIN MEDIZINISCHER DIENST</span>
-        <p>MoodShift nutzt KI zur Bereitstellung von Reflexionen im Bereich der Kognitiven Verhaltenstherapie (KVT/CBT). Es handelt sich <strong>nicht um ein Medizinprodukt</strong> und bietet keine klinische Diagnose, Therapie oder Behandlung.</p>
+        <p>MoodShift nutzt KI zur Unterstützung emotionaler Reflexion und des persönlichen Wohlbefindens. Es handelt sich <strong>nicht um ein Medizinprodukt</strong> und bietet keine klinische Diagnose, Therapie oder Behandlung.</p>
         <ul>
           <li>Die KI (Claude) kann Fehler machen und ist kein Ersatz für einen menschlichen Fachmann.</li>
           <li>Ignoriere keine professionellen medizinischen Ratschläge aufgrund von Inhalten in der App.</li>
@@ -417,7 +344,6 @@
         </ul>
       </div>
     </div>
-
     <div class="section">
       <h2>Abonnements &amp; Nutzungslimits</h2>
       <p>MoodShift bietet gestaffelten Zugang zu seinen Funktionen. Um hohe Qualität und Stabilität zu gewährleisten, wenden wir eine <strong>Fair-Use-Richtlinie</strong> an:</p>
@@ -435,7 +361,6 @@
         <li><strong>Verwaltung:</strong> Du kannst Abonnements in deinen App-Store-Kontoeinstellungen verwalten oder kündigen.</li>
       </ul>
     </div>
-
     <div class="section">
       <h2>Lizenz &amp; Einschränkungen</h2>
       <p>Wir gewähren dir eine persönliche, nicht übertragbare Lizenz zur Nutzung der App für persönliche, nicht-kommerzielle Zwecke. Du verpflichtest dich, Folgendes zu unterlassen:</p>
@@ -445,35 +370,30 @@
         <li>Umgehung von Sitzungslimits oder Sicherheitsfunktionen.</li>
       </ul>
     </div>
-
     <div class="section">
       <h2>Datenschutz &amp; technische Identifikatoren</h2>
       <p>Dein Datenschutz hat höchste Priorität. Wie in unserer Datenschutzerklärung beschrieben, verbleiben deine Gespräche auf deinem Gerät. Wir verwenden eine <strong>anonyme Geräte-ID</strong> zur Verwaltung von Testzeiträumen und App-Stabilität. Wir nutzen keine Cloud-Backups. Du bist für die Sicherheit deines Geräts verantwortlich.</p>
     </div>
-
     <div class="section">
       <h2>Haftungsbeschränkung</h2>
       <p>MoodShift wird „wie besehen" bereitgestellt. Im maximal gesetzlich zulässigen Umfang haften wir nicht für Schäden, die aus der Nutzung der App entstehen, einschließlich des Vertrauens auf KI-generierte Reflexionen oder des Verlusts von auf deinem Gerät gespeicherten Daten.</p>
     </div>
-
     <div class="section">
       <h2>Änderungen der Bedingungen</h2>
       <p>Wir können diese Bedingungen aktualisieren, um neue Funktionen oder rechtliche Anforderungen zu berücksichtigen. Die weitere Nutzung der App nach einer Aktualisierung gilt als Zustimmung zu den neuen Bedingungen. Bei wesentlichen Änderungen werden wir dich in der App benachrichtigen.</p>
     </div>
-
     <div class="contact" id="contact-de">
       <h2>Fragen?</h2>
       <p>Wenn du Fragen zu diesen Bedingungen hast, wende dich gerne an unser Team.</p>
       <a href="mailto:moodshift.coach@gmail.com" class="contact-btn">Support kontaktieren</a>
     </div>
-
     <div class="footer">
-      <p>© 2026 MoodShift: CBT AI Coach &nbsp;·&nbsp; <span>Privacy by Design</span></p>
+      <p>© 2026 MoodShift: AI Wellness Coach &nbsp;·&nbsp; <span>Privacy by Design</span></p>
+      <p style="margin-top:8px">Version 1.0 &nbsp;·&nbsp; Gültig ab Mai 2026</p>
     </div>
-
   </div><!-- /de -->
 
-</div><!-- /container -->
+</div>
 
 <script>
   function setLang(lang) {
@@ -486,14 +406,10 @@
     });
     try { localStorage.setItem('moodshift-lang', lang); } catch(e) {}
   }
-
   (function() {
     let saved;
     try { saved = localStorage.getItem('moodshift-lang'); } catch(e) {}
-    if (saved && ['en','pl','de'].includes(saved)) {
-      setLang(saved);
-      return;
-    }
+    if (saved && ['en','pl','de'].includes(saved)) { setLang(saved); return; }
     const nav = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
     if (nav.startsWith('pl')) setLang('pl');
     else if (nav.startsWith('de')) setLang('de');
